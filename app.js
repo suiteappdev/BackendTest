@@ -52,10 +52,8 @@ function post_confirm(params) {
 			if (_service.user.type == '1') {
 				//iPhone
 				push.ios(_service.user.uuid, pushMessage, 1, 'honk.wav', 'Open', {service_id: _service.id});
-				return;
 			} else {
 				push.android2(_service.user.uuid, pushMessage, 1, 'default', 'Open', {service_id: _service.id});
-				return;
 			}
 
 			return  apiResponder.Error(0);
